@@ -1,0 +1,26 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+triton_sys = { path = "../triton_sys"}
+infer_proto = { path = "../infer_proto" }
+# async-trait = "0.1.73"
+tonic = "0.10.0"
+prost = "0.12.0"
+tokio = { version = "1.32.0", features = ["macros", "rt-multi-thread"] }
+anyhow = "1.0.75"
+serde_json = "1.0.107"
+serde = "1.0.188"
+log = { version = "0.4.20", features = ["kv_unstable"] }
+fern = "0.6.2"
+humantime = "2.1.0"
+
+
+
+[build-dependencies]
+tonic-build = "0.10.0"
+
+[registries.crates-io]
+protocol = "sparse"
